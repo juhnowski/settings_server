@@ -318,6 +318,12 @@ train_schema = {
 	'script_done': {
 		'type': 'boolean',
 	},
+	'status': {
+		'type': 'string',
+	},
+	'csv': {
+		'type': 'string',
+	},
 }
 
 train = {
