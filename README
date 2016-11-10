@@ -1,0 +1,33 @@
+Сервер настроек
+===============
+0) Установить python 2.7.9 и pip
+1) sudo pip install eve
+2) Установить пакеты
+mongodb
+mongodb-clients
+mongodb-dev
+mongodb-server
+curl
+3) Запускаем
+python run.py
+4) Проверяем
+curl -i http://127.0.0.1:5000
+5)sudo service mongodb start
+6) Политика DELETE
+RESOURCE_METHODS lists methods allowed at resource endpoints (/people) while ITEM_METHODS lists the methods enabled at item endpoints (/people/<ObjectId>)
+Внести изменения при необходимости в файл settings.py
+RESOURCE_METHODS = ['GET', 'POST', 'DELETE']
+ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
+7) Как дописать: http://python-eve.org/quickstart.html
+8) Запуск: python run.py
+9) Тест:
+	./test.sh - создает запись
+	./test_get.sh - запрашивает созданную запись
+10) Варианты использования
+	по get запросу получаем настройки
+	по post - отправляем данные с БК
+	никогда ничего не удаляем
+	выполнение скрипта на БК:
+		скрипт в поле лежит в поле script
+		выполнение скрипта отмечается БК в поле script_done
+
